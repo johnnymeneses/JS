@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title> Imersão Dev Alura - Aula 01</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  </head>
+  <script>
+	function Converter() {
+	
+		var nota1Elemento = document.getElementById("valor1")
+		var nota1Texto = nota1Elemento.value
+		var nota1 = parseFloat(nota1Texto)
+	
+		var nota2Elemento = document.getElementById("valor2")
+		var nota2 = parseFloat(nota2Elemento.value)
+		
+		var nota3Elemento = document.getElementById("valor3")
+		var nota3 = parseFloat(nota3Elemento.value)
+		
+		var nota4Elemento = document.getElementById("valor4")
+		var nota4 = parseFloat(nota4Elemento.value)
+		
+		var media = (nota1 + nota2 + nota3 + nota4) / 4
+		var notaFinal = media.toFixed(1)
+		
+		var status=""
+		
+		if(notaFinal >=7){
+			status="Aprovado"
+		}else{
+			status="Reprovado"
+		}
+		
+		//Colocando a nota na pagina
+		var elementoTexto = document.getElementById("mediaFinal")
+		var mensagem = status + ". Sua nota final foi "+notaFinal
+		elementoTexto.innerHTML = mensagem
+
+		
+		
+		
+	}
+  </script>
+  <body>
+    <div class="container">
+      <h1 class="page-title">
+      Calculadora de média</h1>
+      <p class="page-subtitle">
+      Descubra qual a sua média de nota de todas as provas! <br> <Br>
+      
+	  
+	 Digite a 1º nota <input type="number" id="valor1" size="10" /><br>
+	 Digite a 2º nota <input type="number" id="valor2" size="10" /><br>
+	 Digite a 3º nota <input type="number" id="valor3" size="10" /><br>
+	 Digite a 4º nota <input type="number" id="valor4" size="10" /><br>
+	 <br> <br>
+	 
+	<button type="submit" onclick="Converter()">Converter</button>
+	<h3 id="mediaFinal"></h2>
+	</p>
+	
+      <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt="">
+    </div>
+    <a href="https://alura.com.br/" target="_blank">
+    <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+	
+	
+    
+	</a>
+  </body>
+</html
